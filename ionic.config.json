@@ -1,0 +1,7 @@
+{
+  "name": "iForms",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
