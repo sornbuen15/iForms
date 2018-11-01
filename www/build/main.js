@@ -1,4 +1,4 @@
-webpackJsonp([7],{
+webpackJsonp([6],{
 
 /***/ 124:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -55,7 +55,7 @@ var RegisterPage = /** @class */ (function () {
     };
     RegisterPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-register',template:/*ion-inline-start:"D:\project\ionic\iForms\src\pages\register\register.html"*/'<!--\n  Generated template for the RegisterPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>register</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-searchbar [(ngModel)]="terms">\n\n  </ion-searchbar>\n\n \n  <button ion-button type="button" (click)="sort()">Sort</button>\n\n  <ion-list>\n    <ion-item *ngFor="let c of countries | search : terms | sort: {property: column, order: order}">\n      <ion-avatar item-left>\n        <img src="{{c.flag}}">\n      </ion-avatar>\n      <h2 (click)="opensignatureModel()">{{c.name}}</h2>\n      <p>Capital: {{c.capital}}, Region: {{c.region}}</p>\n    </ion-item>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"D:\project\ionic\iForms\src\pages\register\register.html"*/,
+            selector: 'page-register',template:/*ion-inline-start:"/Users/sorn/Documents/ionic/iForms/src/pages/register/register.html"*/'<!--\n  Generated template for the RegisterPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>register</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-searchbar [(ngModel)]="terms">\n\n  </ion-searchbar>\n\n \n  <button ion-button type="button" (click)="sort()">Sort</button>\n\n  <ion-list>\n    <ion-item *ngFor="let c of countries | search : terms | sort: {property: column, order: order}">\n      <ion-avatar item-left>\n        <img src="{{c.flag}}">\n      </ion-avatar>\n      <h2 (click)="opensignatureModel()">{{c.name}}</h2>\n      <p>Capital: {{c.capital}}, Region: {{c.region}}</p>\n    </ion-item>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/sorn/Documents/ionic/iForms/src/pages/register/register.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_api_rest_api__["a" /* RestApiProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* ModalController */]])
     ], RegisterPage);
@@ -120,7 +120,7 @@ var SignaturePage = /** @class */ (function () {
     ], SignaturePage.prototype, "signaturePad", void 0);
     SignaturePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-signature',template:/*ion-inline-start:"D:\project\ionic\iForms\src\pages\signature\signature.html"*/'<!--\n  Generated template for the SignaturePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>signature</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-grid>\n    <ion-row>\n      <ion-col style="align-content: center">\n        <signature-pad (onBeginEvent)="drawStart()" (onEndEvent)="drawComplete()"></signature-pad>\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-4>\n        <button ion-button full color="danger">Cancel</button>\n      </ion-col>\n      <ion-col col-4>\n        <button ion-button full color="light">Clear</button>\n      </ion-col>\n      <ion-col col-4>\n        <button ion-button full color="secondary">Done</button>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>'/*ion-inline-end:"D:\project\ionic\iForms\src\pages\signature\signature.html"*/,
+            selector: 'page-signature',template:/*ion-inline-start:"/Users/sorn/Documents/ionic/iForms/src/pages/signature/signature.html"*/'<!--\n  Generated template for the SignaturePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>signature</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-grid>\n    <ion-row>\n      <ion-col style="align-content: center">\n        <signature-pad (onBeginEvent)="drawStart()" (onEndEvent)="drawComplete()"></signature-pad>\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-4>\n        <button ion-button full color="danger">Cancel</button>\n      </ion-col>\n      <ion-col col-4>\n        <button ion-button full color="light">Clear</button>\n      </ion-col>\n      <ion-col col-4>\n        <button ion-button full color="secondary">Done</button>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>'/*ion-inline-end:"/Users/sorn/Documents/ionic/iForms/src/pages/signature/signature.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], SignaturePage);
@@ -154,31 +154,27 @@ webpackEmptyAsyncContext.id = 136;
 var map = {
 	"../pages/checkin/checkin.module": [
 		404,
-		4
+		3
 	],
 	"../pages/login/login.module": [
 		405,
-		3
+		2
 	],
 	"../pages/luckydoor/luckydoor.module": [
 		406,
-		2
+		1
 	],
 	"../pages/qa/qa.module": [
 		407,
-		1
+		0
 	],
 	"../pages/register/register.module": [
 		408,
-		6
+		5
 	],
 	"../pages/signature/signature.module": [
 		409,
-		5
-	],
-	"../pages/test/test.module": [
-		410,
-		0
+		4
 	]
 };
 function webpackAsyncContext(req) {
@@ -292,7 +288,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-home',template:/*ion-inline-start:"D:\project\ionic\iForms\src\pages\home\home.html"*/'<!-- <ion-header >\n  <ion-navbar>\n    <ion-title>\n      iForms\n    </ion-title>\n  </ion-navbar>\n</ion-header> -->\n\n<ion-content padding class="bg-image">\n  <ion-list col-sm-12 col-md-10 col-lg-5 col-xl-4 class="login-list">\n    <ion-item >\n      <ion-input type="text" placeholder="Username"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-input type="password" placeholder="Password"></ion-input>\n    </ion-item>\n    <button ion-button full (click)=\'loginSuccess()\' >Login</button>\n  </ion-list>\n  \n</ion-content>'/*ion-inline-end:"D:\project\ionic\iForms\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/sorn/Documents/ionic/iForms/src/pages/home/home.html"*/'<!-- <ion-header >\n  <ion-navbar>\n    <ion-title>\n      iForms\n    </ion-title>\n  </ion-navbar>\n</ion-header> -->\n\n<ion-content padding class="bg-image">\n  <ion-list col-sm-12 col-md-10 col-lg-5 col-xl-4 class="login-list">\n    <ion-item >\n      <ion-input type="text" placeholder="Username"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-input type="password" placeholder="Password"></ion-input>\n    </ion-item>\n    <button ion-button full (click)=\'loginSuccess()\' >Login</button>\n  </ion-list>\n  \n</ion-content>'/*ion-inline-end:"/Users/sorn/Documents/ionic/iForms/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
     ], HomePage);
@@ -381,8 +377,7 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/luckydoor/luckydoor.module#LuckydoorPageModule', name: 'LuckydoorPage', segment: 'luckydoor', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/qa/qa.module#QaPageModule', name: 'QaPage', segment: 'qa', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/signature/signature.module#SignaturePageModule', name: 'SignaturePage', segment: 'signature', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/test/test.module#TestPageModule', name: 'TestPage', segment: 'test', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/signature/signature.module#SignaturePageModule', name: 'SignaturePage', segment: 'signature', priority: 'low', defaultHistory: [] }
                     ]
                 })
             ],
@@ -444,7 +439,7 @@ var MyApp = /** @class */ (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"D:\project\ionic\iForms\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"D:\project\ionic\iForms\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"/Users/sorn/Documents/ionic/iForms/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/sorn/Documents/ionic/iForms/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
