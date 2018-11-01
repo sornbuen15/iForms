@@ -15,4 +15,22 @@
 
 <ion-content padding>
 
+  <ion-grid>
+    <ion-row>
+      <ion-col style="align-content: center">
+        <signature-pad (onBeginEvent)="drawStart()" (onEndEvent)="drawComplete()"></signature-pad>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4>
+        <button ion-button full color="danger">Cancel</button>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button full color="light">Clear</button>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button full color="secondary">Done</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

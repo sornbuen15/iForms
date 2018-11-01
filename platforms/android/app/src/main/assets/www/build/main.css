@@ -25674,6 +25674,10 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+ion-content {
+  background-color: #2D6B9A !important;
+}
+
 page-home ion-list.login-list {
   margin: 35vh auto 5vh auto;
 }
@@ -25683,4 +25687,14 @@ page-home .bg-image {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+page-register ion-searchbar .searchbar-input-container .searchbar-input {
+  border-radius: 20px;
+}
+
+page-signature signature-pad canvas {
+  border: 1px dashed #333333;
+  background-color: #FFFFFF;
+  width: 100%;
 }
