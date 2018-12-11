@@ -1,0 +1,20 @@
+page-edit-register {
+    ion-searchbar{        
+        .searchbar-input-container{
+            .searchbar-input{
+                border-radius: 20px;
+            }
+        }
+     }
+     search-name{
+        width:10;
+     }
+}
+.modal-fullscreen {
+    .modal-wrapper {
+        height: 160px;
+    }
+    .scroll-content {
+     overflow-y: hidden;
+    }
+}

@@ -1,0 +1,58 @@
+<!--
+  Generated template for the EditRegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-buttons col-xl-5 col-lg-5 col-sm-5 style="padding-left: 70px;">
+      <button ion-button icon-only>
+        <img src="../../assets/imgs/long-logo.png" height="35">
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles">
+
+    </ion-refresher-content>
+  </ion-refresher>
+  <ion-grid>
+    <ion-row>
+      <ion-col offset-xl-5 col-xl-5 offset-lg-5 col-lg-7 offset-md-5 col-md-7 col-sm-12>
+        <ion-searchbar [(ngModel)]="searchResultCompany">
+        </ion-searchbar>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-xl-5 col-lg-5 col-md-5 hidden-sm style="text-align: center;">
+        <img src="../../assets/imgs/pongpara50th.logo.png">
+      </ion-col>
+      <ion-col col-xl-5 col-lg-7 col-md-7 col-sm-12>
+        <ion-list>
+          <ion-item-group *ngFor="let group of alreadyList | groupBy: 'organization' | searchbycompany : searchResultCompany">
+            <ion-item-divider color="smoke">
+              <ion-label>{{ group.key }}</ion-label>
+            </ion-item-divider>
+            <ion-item *ngFor="let list of group.list">
+              <p ion-text color="secondary">
+                <b>Name: </b> {{list.firstname}} {{list.lastname}},
+                &nbsp;&nbsp;<b>Phone: </b> {{list.phone}}
+              </p>
+              <ion-icon style="cursor: pointer;" color="primary" name="create" item-end
+                (click)="confirmEditModal(list)">
+              </ion-icon>
+            </ion-item>
+          </ion-item-group>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

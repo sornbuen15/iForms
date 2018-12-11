@@ -1,20 +1,25 @@
-<!-- <ion-header >
-  <ion-navbar>
-    <ion-title>
-      iForms
-    </ion-title>
-  </ion-navbar>
-</ion-header> -->
-
-<ion-content padding class="bg-image">
-  <ion-list col-sm-12 col-md-10 col-lg-5 col-xl-4 class="login-list">
-    <ion-item >
-      <ion-input type="text" placeholder="Username"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input type="password" placeholder="Password"></ion-input>
-    </ion-item>
-    <button ion-button full (click)='loginSuccess()' >Login</button>
-  </ion-list>
-  
+<ion-header>
+    <ion-navbar >
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-buttons col-xl-6 col-lg-6 col-md-6 col-sm-6 style="padding-left: 70px;">
+        <button ion-button icon-only>
+          <img src="../../assets/imgs/long-logo.png" height="35">
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+<ion-content padding>
+  <ion-grid style="margin-top:20vh">
+    <ion-row>
+      <ion-col col-xl-6 col-lg-6 col-md-6 col-sm-6 style="text-align: center;">
+        <img src="../../assets/imgs/pongpara50th.logo.png">
+      </ion-col>
+      <ion-col col-xl-5 col-lg-6 col-md-6 col-sm-6 style="text-align: center;">
+        <img src="../../assets/imgs/long-logo.png" style="margin-bottom:13vh">
+        <button ion-button full (click)='gestList()'>Guest List</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

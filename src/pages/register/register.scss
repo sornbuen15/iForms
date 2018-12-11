@@ -1,16 +1,24 @@
 page-register {
+    
     ion-searchbar{        
         .searchbar-input-container{
-            // padding-left:10%;
-            // padding-right:5%;
-            // .searchbar-search-icon {
-            //     background-image: url("../../assets/icon/Search_32px.png");
-            // }
-            // text-align: center;
             .searchbar-input{
 
                 border-radius: 20px;
             }
         }
      }
+     search-name{
+        width:10;
+     }
+
+     
+}
+.modal-fullscreen {
+   .modal-wrapper {
+       height: 200px;
+   }
+   .scroll-content {
+    overflow-y: hidden;
+    }
 }
