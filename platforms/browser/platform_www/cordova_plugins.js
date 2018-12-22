@@ -180,50 +180,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/cordova-plugin-advanced-http/www/lodash.js",
-        "id": "cordova-plugin-advanced-http.lodash",
-        "pluginId": "cordova-plugin-advanced-http"
-    },
-    {
-        "file": "plugins/cordova-plugin-advanced-http/www/umd-tough-cookie.js",
-        "id": "cordova-plugin-advanced-http.tough-cookie",
-        "pluginId": "cordova-plugin-advanced-http"
-    },
-    {
-        "file": "plugins/cordova-plugin-advanced-http/www/messages.js",
-        "id": "cordova-plugin-advanced-http.messages",
-        "pluginId": "cordova-plugin-advanced-http"
-    },
-    {
-        "file": "plugins/cordova-plugin-advanced-http/www/local-storage-store.js",
-        "id": "cordova-plugin-advanced-http.local-storage-store",
-        "pluginId": "cordova-plugin-advanced-http"
-    },
-    {
-        "file": "plugins/cordova-plugin-advanced-http/www/cookie-handler.js",
-        "id": "cordova-plugin-advanced-http.cookie-handler",
-        "pluginId": "cordova-plugin-advanced-http"
-    },
-    {
-        "file": "plugins/cordova-plugin-advanced-http/www/helpers.js",
-        "id": "cordova-plugin-advanced-http.helpers",
-        "pluginId": "cordova-plugin-advanced-http"
-    },
-    {
-        "file": "plugins/cordova-plugin-advanced-http/www/advanced-http.js",
-        "id": "cordova-plugin-advanced-http.http",
-        "pluginId": "cordova-plugin-advanced-http",
-        "clobbers": [
-            "cordova.plugin.http"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-advanced-http/src/browser/cordova-http-plugin.js",
-        "id": "cordova-plugin-advanced-http.http-proxy",
-        "pluginId": "cordova-plugin-advanced-http",
-        "runs": true
-    },
-    {
         "file": "plugins/cordova-plugin-device/www/device.js",
         "id": "cordova-plugin-device.device",
         "pluginId": "cordova-plugin-device",
@@ -318,7 +274,6 @@ module.exports.metadata =
 // TOP OF METADATA
 {
     "cordova-plugin-file": "6.0.1",
-    "cordova-plugin-advanced-http": "2.0.1",
     "cordova-plugin-device": "2.0.2",
     "cordova-plugin-ionic-keyboard": "2.1.3",
     "cordova-plugin-ionic-webview": "2.2.0",

@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+// import { Observable,  } from 'rxjs/Observable';
 import { map, catchError } from 'rxjs/operators';
+import { Observable } from 'rxjs/Rx';
 
 /*
   Generated class for the RestApiProvider provider.
@@ -13,14 +14,14 @@ import { map, catchError } from 'rxjs/operators';
 export class RestApiProvider {
   // private apiUrl1 = 'https://restcountries.eu/rest/v2/all';
   private apiUrl = 'http://pongpara.iform.online/backend/apis';
-  //private apiUrl = 'http://192.168.1.102/backend/apis';
+  //  private apiUrl = 'http://192.168.43.56/backend/apis';
   constructor(public http: HttpClient) {
     // console.log('Hello RestApiProvider Provider');
   }
 
-  public authenticate(formData): Observable<string[]> {
+  public authenticate(data): Observable<string[]> {
     var api = this.apiUrl + "/authenticate.json";
-    return this.http.post(api, formData ).pipe(
+    return this.http.post(api, data).pipe(
       map(this.extractData),
       catchError(this.handleError)
     )
@@ -67,6 +68,14 @@ export class RestApiProvider {
     )
   }
 
+  public report(): Observable<any> {
+    var api = this.apiUrl + "/report.json";
+    return this.http.post(api, null).pipe(
+      map(this.extractData),
+      catchError(this.handleError)
+    )
+  }
+
   private extractData(res: Response) {
     let result = res['result']['success'];
     let message = res['result']['message'];
@@ -99,7 +108,6 @@ export class RestApiProvider {
     } else {
       errMsg = error.message ? error.message : error.toString();
     }
-    console.error(errMsg);
     return Observable.throw(errMsg);
   }
 }

@@ -222,44 +222,6 @@ module.exports = [
     "runs": true
   },
   {
-    "id": "cordova-plugin-advanced-http.lodash",
-    "file": "plugins/cordova-plugin-advanced-http/www/lodash.js",
-    "pluginId": "cordova-plugin-advanced-http"
-  },
-  {
-    "id": "cordova-plugin-advanced-http.tough-cookie",
-    "file": "plugins/cordova-plugin-advanced-http/www/umd-tough-cookie.js",
-    "pluginId": "cordova-plugin-advanced-http"
-  },
-  {
-    "id": "cordova-plugin-advanced-http.messages",
-    "file": "plugins/cordova-plugin-advanced-http/www/messages.js",
-    "pluginId": "cordova-plugin-advanced-http"
-  },
-  {
-    "id": "cordova-plugin-advanced-http.local-storage-store",
-    "file": "plugins/cordova-plugin-advanced-http/www/local-storage-store.js",
-    "pluginId": "cordova-plugin-advanced-http"
-  },
-  {
-    "id": "cordova-plugin-advanced-http.cookie-handler",
-    "file": "plugins/cordova-plugin-advanced-http/www/cookie-handler.js",
-    "pluginId": "cordova-plugin-advanced-http"
-  },
-  {
-    "id": "cordova-plugin-advanced-http.helpers",
-    "file": "plugins/cordova-plugin-advanced-http/www/helpers.js",
-    "pluginId": "cordova-plugin-advanced-http"
-  },
-  {
-    "id": "cordova-plugin-advanced-http.http",
-    "file": "plugins/cordova-plugin-advanced-http/www/advanced-http.js",
-    "pluginId": "cordova-plugin-advanced-http",
-    "clobbers": [
-      "cordova.plugin.http"
-    ]
-  },
-  {
     "id": "cordova-plugin-uniquedeviceid.UniqueDeviceID",
     "file": "plugins/cordova-plugin-uniquedeviceid/www/uniqueid.js",
     "pluginId": "cordova-plugin-uniquedeviceid",
@@ -302,7 +264,6 @@ module.exports.metadata =
   "cordova-plugin-statusbar": "2.4.2",
   "cordova-plugin-whitelist": "1.3.3",
   "cordova-plugin-file": "6.0.1",
-  "cordova-plugin-advanced-http": "2.0.1",
   "cordova-plugin-uniquedeviceid": "1.3.2",
   "cordova-sqlite-storage": "2.5.2",
   "cordova-plugin-file-transfer": "1.7.1"

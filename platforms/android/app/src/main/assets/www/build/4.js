@@ -1,14 +1,14 @@
 webpackJsonp([4],{
 
-/***/ 412:
+/***/ 413:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CheckinPageModule", function() { return CheckinPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DeviceRegisterPageModule", function() { return DeviceRegisterPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__checkin__ = __webpack_require__(420);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__device_register__ = __webpack_require__(422);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,31 +18,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CheckinPageModule = /** @class */ (function () {
-    function CheckinPageModule() {
+var DeviceRegisterPageModule = /** @class */ (function () {
+    function DeviceRegisterPageModule() {
     }
-    CheckinPageModule = __decorate([
+    DeviceRegisterPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__checkin__["a" /* CheckinPage */],
+                __WEBPACK_IMPORTED_MODULE_2__device_register__["a" /* DeviceRegisterPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__checkin__["a" /* CheckinPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__device_register__["a" /* DeviceRegisterPage */]),
             ],
         })
-    ], CheckinPageModule);
-    return CheckinPageModule;
+    ], DeviceRegisterPageModule);
+    return DeviceRegisterPageModule;
 }());
 
-//# sourceMappingURL=checkin.module.js.map
+//# sourceMappingURL=device-register.module.js.map
 
 /***/ }),
 
-/***/ 420:
+/***/ 422:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CheckinPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DeviceRegisterPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(40);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -57,29 +57,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the CheckinPage page.
+ * Generated class for the DeviceRegisterPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var CheckinPage = /** @class */ (function () {
-    function CheckinPage(navCtrl, navParams) {
+var DeviceRegisterPage = /** @class */ (function () {
+    function DeviceRegisterPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    CheckinPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad CheckinPage');
+    DeviceRegisterPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad DeviceRegisterPage');
     };
-    CheckinPage = __decorate([
+    DeviceRegisterPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-checkin',template:/*ion-inline-start:"D:\project\ionic\iForms\src\pages\checkin\checkin.html"*/'<!--\n  Generated template for the CheckinPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>checkin</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"D:\project\ionic\iForms\src\pages\checkin\checkin.html"*/,
+            selector: 'page-device-register',template:/*ion-inline-start:"D:\project\ionic\iForms\src\pages\device-register\device-register.html"*/'<!--\n  Generated template for the DeviceRegisterPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>device-register</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"D:\project\ionic\iForms\src\pages\device-register\device-register.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
-    ], CheckinPage);
-    return CheckinPage;
+    ], DeviceRegisterPage);
+    return DeviceRegisterPage;
 }());
 
-//# sourceMappingURL=checkin.js.map
+//# sourceMappingURL=device-register.js.map
 
 /***/ })
 

@@ -14,11 +14,11 @@ import { LoginPage } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
 import { RegisterPage,SignatureModal, StatusModal, ChcekinModal, ConfirmEditModal } from '../pages/register/register';
 import { RestApiProvider } from '../providers/rest-api/rest-api';
-import { SearchByCompanyPipe } from '../pipes/search/searchbycompany';
-import { SearchByNamePipe } from '../pipes/search/searchbyname';
+import { SearchPipe } from '../pipes/search/search';
 import { SortPipe } from '../pipes/sort/sort';
 import { GroupByPipe } from '../pipes/group/group';
 import { SignatureFieldPage } from '../pages/signature-field/signature-field';
+import { ReportPage } from '../pages/report/report';
 
 @NgModule({
   declarations: [
@@ -26,15 +26,15 @@ import { SignatureFieldPage } from '../pages/signature-field/signature-field';
     HomePage, 
     RegisterPage,
     GroupByPipe,
-    SearchByCompanyPipe,
-    SearchByNamePipe,
+    SearchPipe,
     SortPipe,
     LoginPage,
     SignatureModal,
     SignatureFieldPage,
     StatusModal,
     ChcekinModal,
-    ConfirmEditModal
+    ConfirmEditModal,
+    ReportPage
   ],
   imports: [
     SignaturePadModule,
@@ -53,7 +53,8 @@ import { SignatureFieldPage } from '../pages/signature-field/signature-field';
     SignatureFieldPage,
     StatusModal,
     ChcekinModal,
-    ConfirmEditModal
+    ConfirmEditModal,
+    ReportPage
   ],
   providers: [
     ModalController,

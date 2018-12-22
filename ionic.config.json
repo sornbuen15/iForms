@@ -7,7 +7,7 @@
   "proxies": [
     {
       "path":"/apis",
-      "proxyUrl": "http://pongpara.iform.online//backend//apis"
+      "proxyUrl": "http://pongpara.iform.online/backend/apis"
     }
   ]
 }

@@ -27968,6 +27968,27 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+.error-message {
+  padding: 3vh;
+  color: red;
+}
+
+page-edit-register ion-searchbar .searchbar-input-container .searchbar-input {
+  border-radius: 20px;
+}
+
+page-edit-register search-name {
+  width: 10;
+}
+
+.modal-fullscreen .modal-wrapper {
+  height: 160px;
+}
+
+.modal-fullscreen .scroll-content {
+  overflow-y: hidden;
+}
+
 page-home ion-list.login-list {
   margin: 15vh auto 5vh auto;
 }
@@ -28015,12 +28036,25 @@ page-home .button.rowspan {
   flex: 2;
 }
 
+page-login ion-title * {
+  margin-top: 30vh;
+  margin-bottom: 5vh;
+}
+
 page-register ion-searchbar .searchbar-input-container .searchbar-input {
   border-radius: 20px;
 }
 
 page-register search-name {
   width: 10;
+}
+
+.modal-fullscreen .modal-wrapper {
+  height: 200px;
+}
+
+.modal-fullscreen .scroll-content {
+  overflow-y: hidden;
 }
 
 signature-field signature-pad canvas {

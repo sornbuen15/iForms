@@ -7,9 +7,6 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-advanced-http": {
-      "PACKAGE_NAME": "io.ionic.sorn"
-    },
     "cordova-plugin-device": {
       "PACKAGE_NAME": "io.ionic.sorn"
     },

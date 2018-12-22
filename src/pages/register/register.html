@@ -1,10 +1,10 @@
-<ion-header >
-  <ion-navbar >
-    <button ion-button menuToggle >
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-buttons col-xl-5 col-lg-5 col-sm-5 style="padding-left: 70px;">
-      <button ion-button icon-only >
+      <button ion-button icon-only>
         <img src="../../assets/imgs/long-logo.png" height="35">
       </button>
     </ion-buttons>
@@ -16,49 +16,32 @@
 
     </ion-refresher-content>
   </ion-refresher>
-  <ion-grid >
-    <ion-row >
-      <ion-col offset-xl-5 col-xl-6 offset-lg-1 col-lg-10 offset-md-1 col-md-10 col-sm-12>
-        <ion-searchbar [(ngModel)]="searchResultCompany">
+  <ion-grid>
+    <ion-row>
+      <ion-col offset-xl-5 col-xl-6 col-lg-12 col-md-12 col-sm-12>
+        <ion-searchbar [(ngModel)]="searchResult">
         </ion-searchbar>
       </ion-col>
     </ion-row>
-    <!-- <ion-row>
-      <ion-col offset-xl-5 col-xl-5 offset-lg-5 col-lg-7 offset-md-5 col-md-7 col-sm-12>
-        <ion-searchbar [(ngModel)]="searchResultName">
-        </ion-searchbar>
-      </ion-col>
-    </ion-row> -->
     <ion-row>
-      <ion-col col-xl-4 [hidden]="devWidth < 1024" style="text-align: right;">
+      <ion-col col-xl-5 [hidden]="devWidth < 1400" style="text-align: center;">
         <img src="../../assets/imgs/pongpara50th.logo.png">
       </ion-col>
-      <ion-col  col-xl-6  offset-lg-1 col-lg-10 offset-md-1 col-md-10 col-sm-12>
-        <ion-list>
-          <ion-item-group *ngFor="let group of guestlist | groupBy: 'organization' | searchbycompany : searchResultCompany">
-            <ion-item-divider color="smoke">
-              <ion-label>{{ group.key }}</ion-label>
-            </ion-item-divider>
-            <ion-item *ngFor="let list of group.list">
-              <p ion-text *ngIf="list.is_register == 'Y'" (click)="statusModal(list)" color="secondary">
-                <b>Name: </b> {{list.firstname}} {{list.lastname}},
-                &nbsp;&nbsp;<b>Phone: </b> {{list.phone}}
-              </p>
-              <ion-icon *ngIf="list.is_register === 'Y'" style="cursor: pointer;" color="primary" name="create"
-                item-end (click)="confirmEditModal(list)">
-              </ion-icon>
-              <!-- <p ion-text *ngIf="list.is_register != 'Y'" (click)="signatureModal(list.id)">
-                <b>Name: </b> {{list.firstname}} {{list.lastname}},
-                &nbsp;&nbsp;<b>Phone: </b> {{list.phone}}
-              </p> -->
-              <p ion-text *ngIf="list.is_register !== 'Y'">
-                <b>Name: </b> {{list.firstname}} {{list.lastname}},
-                &nbsp;&nbsp;<b>Phone: </b> {{list.phone}}
-              </p>
-              <ion-icon *ngIf="list.is_register !== 'Y'" style="cursor: pointer;" color="primary" name="pin" item-end
-                (click)="checkinModal(list)"></ion-icon>
-            </ion-item>
-          </ion-item-group>
+      <ion-col col-xl-6 col-lg-12 col-md-12 col-sm-12>
+        <ion-list >
+          <ion-grid *ngFor="let list of guestlists | search: searchResult" font-color="primary">
+            <ion-row ion-text [color]="list.is_register === 'Y'? 'secondary':''" style="border-bottom:1px gray solid">
+              <ion-col col-4><b>Name: </b> {{list.fullname}} </ion-col>
+              <ion-col col-2><b>Table: </b> {{list.table_no}}</ion-col>  
+              <ion-col col-4><b>Company: </b> {{list.organization}}</ion-col>
+              <ion-col col-2>
+                <ion-icon *ngIf="list.is_register === 'Y'" style="cursor: pointer;" color="primary" name="create"
+                  item-end (click)="confirmEditModal(list)"></ion-icon>
+                <ion-icon *ngIf="list.is_register !== 'Y'" style="cursor: pointer;" color="primary" name="pin" item-end
+                  (click)="checkinModal(list)"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
         </ion-list>
       </ion-col>
     </ion-row>

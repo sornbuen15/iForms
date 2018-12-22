@@ -1,28 +1,34 @@
 <ion-content padding center text-content>
-  <ion-title></ion-title>
-  <form [formGroup]="loginForm" (ngSubmit)="login()">
-    <ion-list>
-      <ion-item>
-        <ion-input placeholder="Username" formControlName="username" [(ngModel)]="loginForm.username"></ion-input>
-      </ion-item>
-      <div class="validation-errors">
-        <ng-container *ngFor="let validation of validation_messages.username">
-          <div class="error-message" *ngIf="this.loginForm.get('username').hasError(validation.type) && (this.loginForm.get('username').dirty || this.loginForm.get('username').touched)">
-            {{ validation.message }}
-          </div>
-        </ng-container>
-      </div>
-      <ion-item>
-        <ion-input placeholder="Password" formControlName="password" type="password" [(ngModel)]="loginForm.password"></ion-input>
-      </ion-item>
-      <div class="validation-errors">
-        <ng-container *ngFor="let validation of validation_messages.password">
-          <div class="error-message" *ngIf="this.loginForm.get('password').hasError(validation.type) && (this.loginForm.get('password').dirty || this.loginForm.get('password').touched)">
-            {{ validation.message }}
-          </div>
-        </ng-container>
-      </div>
-    </ion-list>
-    <button ion-button full type="submit">Log in</button>
-  </form>
+  <div offset-xl-4 col-xl-4 style="margin-top:25vh;">
+    <img src="../../assets/imgs/long-logo.png">
+    <br>
+    <br>
+    <br>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <ion-list>
+        <ion-item>
+          <ion-input placeholder="Username" formControlName="username" [(ngModel)]="loginForm.username"></ion-input>
+        </ion-item>
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validation_messages.username">
+            <div class="error-message" *ngIf="this.loginForm.get('username').hasError(validation.type) && (this.loginForm.get('username').dirty || this.loginForm.get('username').touched)">
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
+        <ion-item>
+          <ion-input placeholder="Password" formControlName="password" type="password" [(ngModel)]="loginForm.password"></ion-input>
+        </ion-item>
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validation_messages.password">
+            <div class="error-message" *ngIf="this.loginForm.get('password').hasError(validation.type) && (this.loginForm.get('password').dirty || this.loginForm.get('password').touched)">
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
+      </ion-list>
+      <button ion-button full type="submit">Log in</button>
+    </form>
+  </div>
+
 </ion-content>

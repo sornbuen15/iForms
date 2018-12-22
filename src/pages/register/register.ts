@@ -2,6 +2,7 @@ import { Component, QueryList, ElementRef, ViewChildren } from '@angular/core';
 import { IonicPage, Nav, NavController, NavParams, ModalController, Platform, ViewController } from 'ionic-angular';
 import { RestApiProvider } from '../../providers/rest-api/rest-api';
 import { SignatureFieldPage } from '../signature-field/signature-field';
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the RegisterPage page.
@@ -18,7 +19,7 @@ import { SignatureFieldPage } from '../signature-field/signature-field';
 })
 
 export class RegisterPage {
-  guestlist: string[];
+  guestlists: string[];
   errorMessage: string;
   descending: boolean = false;
   order: number;
@@ -28,7 +29,7 @@ export class RegisterPage {
   public devWidth = this.platform.width();
   constructor(public nav: Nav, public navCtrl: NavController, public navParams: NavParams,
     public rest: RestApiProvider, public modalCtrl: ModalController, public platform: Platform) {
-      this.getGuestlist();
+    this.getGuestlist();
 
   }
 
@@ -48,7 +49,7 @@ export class RegisterPage {
   getGuestlist() {
     this.rest.getGuestlist().subscribe(
       guestlists => {
-        this.guestlist = guestlists
+        this.guestlists = guestlists
       },
       error => this.errorMessage = <any>error
     );
@@ -112,12 +113,12 @@ export class RegisterPage {
 <ion-content padding>
   <ion-grid>
     <ion-row>
-      <ion-col col-6>
-        <b>Name :</b> {{data.firstname}} {{data.lastname}}
+      <ion-col col-12>
+        <b>Name :</b> {{data.fullname}}
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col col-6>
+      <ion-col col-12>
         <b>Company :</b> {{data.organization}}
       </ion-col>
     </ion-row>
@@ -134,16 +135,25 @@ export class RegisterPage {
 })
 export class ChcekinModal {
   data: any = [];
-  constructor(public viewCtrl: ViewController, params: NavParams, public rest: RestApiProvider) {
+  constructor(public viewCtrl: ViewController, params: NavParams, public rest: RestApiProvider, public storage: Storage) {
 
     this.data = params.get('data');
-    console.log(this.data);
+    // console.log(this.data);
   }
 
   registerByCheckin() {
-    this.rest.registerByCheckin(this.data).subscribe(
-      (data) => { this.dismiss(data) }
+
+    this.storage.get('username').then(
+      value => {
+        let username = value
+        console.log(username)
+        this.data['username'] = username;
+        this.rest.registerByCheckin(this.data).subscribe(
+          (data) => { this.dismiss(data) }
+        )
+      }
     )
+
   }
 
   dismiss(data) {
@@ -269,7 +279,13 @@ export class SignatureModal {
 }
 /* StatusModal */
 @Component({
-  template: `<ion-content padding>
+  template: `
+  <ion-header>
+  <ion-navbar>
+    <ion-title>Welcome ยินดีต้อนรับ</ion-title>
+  </ion-navbar>
+  </ion-header>
+  <ion-content padding>
   <ion-grid style="margin-top:10vh">
     <ion-row>
       <ion-col col-xl-5 col-lg-5 col-md-6 col-sm-6 style="text-align: center;">
@@ -278,10 +294,7 @@ export class SignatureModal {
       <ion-col offset-xl-1 col-xl-5 col-lg-5 col-md-6 col-sm-6 >
         <img src="../../assets/imgs/long-logo.png" style="margin-bottom:2vh">
         <ion-row>
-          <ion-col><b>Name:</b>&nbsp;&nbsp;{{data.firstname}}</ion-col>
-        </ion-row>
-        <ion-row >
-          <ion-col><b>Lastname:</b>&nbsp;&nbsp;{{data.lastname}}</ion-col>
+          <ion-col><b>Name:</b>&nbsp;&nbsp;{{data.fullname}}</ion-col>
         </ion-row>
         <ion-row >
           <ion-col><b>Company:</b>&nbsp;&nbsp;{{data.organization}}</ion-col>
@@ -308,22 +321,22 @@ export class StatusModal {
   }
 }
 
-/* ChcekinModal */
+/* ConfirmEditModal */
 @Component({
   template: `<ion-header>
   <ion-navbar>
-    <ion-title>Confirm Avoid Checkin</ion-title>
+    <ion-title>Confirm Remove Checkin</ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content padding>
   <ion-grid>
     <ion-row>
-      <ion-col col-6>
-        <b>Name :</b> {{data.firstname}} {{data.lastname}}
+      <ion-col col-12>
+        <b>Name :</b> {{data.fullname}}
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col col-6>
+      <ion-col col-12>
         <b>Company :</b> {{data.organization}}
       </ion-col>
     </ion-row>
